@@ -129,7 +129,7 @@ function optimize(solver::IPOPT, cache, x0, lx, ux, lg, ug, rows, cols)
     # now it's safe to free the C-side memory
     finalize(prob)
 
-    return prob.x, prob.obj_val, ApplicationReturnStatus[status], nothing
+    return result_x, result_f, result_status, nothing
 end
 
 
